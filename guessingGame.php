@@ -66,22 +66,17 @@ session_start();
                              echo "<h2 class='text-primary text-center'> Please Try Again... </h2>"; 
                         }
                         else if($rand == $guessNumber) {
-                            echo '<img src="https://t4.ftcdn.net/jpg/03/61/34/63/360_F_361346394_x5omMsoglwAJ2I1Dh4K53nZePHpiXylL.jpg" height="300px" width="300px">';
+                            echo '<img src="https://t4.ftcdn.net/jpg/03/61/34/63/360_F_361346394_x5omMsoglwAJ2I1Dh4K53nZePHpiXylL.jpg" height="300px" width="400px">';
                             
-                            if($_SESSION['counter'] < 2) {
-                            echo '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfd_w8V2DPKEo0i9NMjjlvXoG4jh4Y-lTuew&usqp=CAU"height="60px" width="50px">';  
-                            
-                            echo "<h4 class='text-success border text-center'>  You Gained 10 Points & Guessed  Correct Number is " . $rand . "<br>"
+    
+                            echo "<h4 class='text-success border text-center'> You Guessed The Correct Number " . $rand . "<br>"
                                 . "You Have Tried " . $_SESSION['counter'] . " Times </h4>";
-                            }    
-
-
                             $_SESSION['counter'] = 0;
                             echo "<script>
                              setTimeout(function(){ alert('CONGRATULATIONS !!! PLEASE RE-START THE GAME'); }, 2000);
                             </script>";
                             header('refresh: 3; url=index.php');
-                        
+                        }
                     } else {
                         echo '<img src="https://previews.123rf.com/images/arcady31/arcady311705/arcady31170500009/77165345-oops-vector-banner-with-emoji.jpg" height="130px" width="150px">';
                         echo "<h2 class='text-danger text-center'> Sorry </h2>";
@@ -101,9 +96,10 @@ session_start();
             </div>
         </div>
     </div>
-    
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+
+
     
 </body>
 
